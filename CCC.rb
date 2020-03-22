@@ -19,6 +19,10 @@ class Room
     @songs = []
   end
 
+  def guest_inside
+    return @songs.size
+  end
+
 end
 
 class Guest
