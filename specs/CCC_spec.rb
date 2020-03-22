@@ -45,6 +45,13 @@ class TestRoom < Minitest::Test
     assert_equal(2, @room.guest_inside)
   end
 
+  def test_guest_removed_from_room
+    @room.guest_added("Susan")
+    @room.guest_added("Jack")
+    @room.guest_removed("Susan")
+    assert_equal(1, @room.guest_inside)
+end
+
 end
 
 class TestGuest < MiniTest::Test

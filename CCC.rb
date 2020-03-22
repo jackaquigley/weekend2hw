@@ -27,6 +27,10 @@ class Room
     @guests.push(guest)
   end
 
+  def guest_removed(guest)
+    @guests.delete(guest)
+  end
+
 end
 
 class Guest
