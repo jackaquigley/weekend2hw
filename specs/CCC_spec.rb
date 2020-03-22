@@ -20,5 +20,17 @@ class TestSong < Minitest::Test
   def test_song_has_artist
     assert_equal("Frank Sinatra", @song.artist)
   end
-  
+
+end
+
+class TestRoom < Minitest::Test
+
+  def setup
+    @room = Room.new ("Room One")
+  end
+
+  def test_room_has_name
+    assert_equal("Room One", @room.name)
+  end
+
 end

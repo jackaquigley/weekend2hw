@@ -8,3 +8,13 @@ attr_reader :artist, :title
   end
 
 end
+
+class Room
+
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+
+end
