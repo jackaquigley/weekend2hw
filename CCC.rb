@@ -11,10 +11,22 @@ end
 
 class Room
 
-  attr_reader :name
+  attr_reader :name, :guests, :songs
 
   def initialize(name)
     @name = name
+    @guests = []
+    @songs = []
+  end
+
+end
+
+class Guest
+
+  attr_reader :guest_name
+
+  def initialize(guest_name)
+    @guest_name = guest_name
   end
 
 end

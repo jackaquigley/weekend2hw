@@ -26,11 +26,23 @@ end
 class TestRoom < Minitest::Test
 
   def setup
-    @room = Room.new ("Room One")
+    @room = Room.new("Room One")
   end
 
   def test_room_has_name
     assert_equal("Room One", @room.name)
+  end
+
+end
+
+class TestGuest < MiniTest::Test
+
+  def setup
+    @guest = Guest.new("Bob")
+  end
+
+  def test_guest_has_name
+    assert_equal("Bob", @guest.guest_name)
   end
 
 end
