@@ -31,6 +31,10 @@ class Room
     @guests.delete(guest)
   end
 
+  def room_cleared
+    @guests.clear
+  end
+
 end
 
 class Guest
