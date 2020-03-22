@@ -35,6 +35,14 @@ class Room
     @guests.clear
   end
 
+  def songs_in_room
+    return @songs.size
+  end
+
+  def song_added(song)
+    @songs.push(song)
+  end
+
 end
 
 class Guest

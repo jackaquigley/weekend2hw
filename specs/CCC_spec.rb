@@ -5,8 +5,6 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 require_relative ('../CCC.rb')
 
-#create a song
-
 class TestSong < Minitest::Test
 
   def setup
@@ -29,6 +27,7 @@ class TestRoom < Minitest::Test
     @room = Room.new("Room One")
     @guest1 = Guest.new ("Jack")
     @guest2 = Guest.new ("Susan")
+    @song1 = Song.new("Queen", "Bohemian Rapsody")
   end
 
   def test_room_has_name
@@ -57,6 +56,15 @@ end
     @room.guest_added("Jack")
     @room.room_cleared
     assert_equal(0, @room.guest_inside)
+  end
+
+  def test_songs_in_room
+    assert_equal(0, @room.songs_in_room)
+  end
+
+  def test_songs_added
+    @room.song_added(@song1)
+    assert_equal(1, @room.songs_in_room)
   end
 
 end
