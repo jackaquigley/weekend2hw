@@ -20,7 +20,11 @@ class Room
   end
 
   def guest_inside
-    return @songs.size
+    return @guests.size
+  end
+
+  def guest_added(guest)
+    @guests.push(guest)
   end
 
 end
